@@ -1,0 +1,170 @@
+/* ---------------------------------------------------------------- */
+/*--------------- Project body general style ---------------*/
+html {
+	width: 100dvw;
+	font-family: Arial, sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+}
+body {
+	background-color: #605a5a;
+	background-image: url("./assets/states.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	/* height: 100%; */
+	width: 100%;
+}
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+/*--------------------------MOBILE WORKFLOW---------------------*/
+/*--------------profile card container -------------------*/
+article[data-testid="test-profile-card"] {
+	/* height: 100%; */
+	width: 100%;
+	padding: 1rem;
+	background-color: rgba(61, 58, 58, 0.6);
+	color: rgba(255, 255, 255, 0.761);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid #020202;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*-------------  PROFILE HEADER  -------------*/
+#profileHeader {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 1rem 0;
+	/* background-color: orange; */
+}
+#profileHeader figure {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 0.5rem;
+}
+/*------------- profile header image -------------*/
+#profileHeader img {
+	border-radius: 50%;
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+}
+/* -------------imageUploadMethods------------ */
+.imageUploadMethods {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+
+.imageUploadMethods label {
+	margin-bottom: 0.5rem;
+}
+.imageUploadMethods input {
+	margin-bottom: 0.5rem;
+	width: 100%;
+}
+#avatarUpload::file-selector-button {
+	background-color: rgba(61, 58, 58, 0.6);
+	color: #a8a8a8;
+	padding: 0.5rem 1rem;
+	border: 1px solid #555555;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 0.9rem;
+	transition: background 0.3s;
+}
+#avatarUpload::file-selector-button:hover {
+	background-color: #45a049;
+	color: black;
+}
+#avatarUpload {
+	color: #a8a8a8;
+}
+#avatarUrl::placeholder {
+	background-color: rgb(61, 58, 58);
+	color: #a8a8a8;
+}
+#avatarUrl {
+	/* color: #ccc; */
+	padding: 0.5rem;
+	background-color: rgb(61, 58, 58);
+	border: 1px solid #555555;
+	border-radius: 6px;
+}
+/*--------------profile name --------------*/
+#profileHeader h2 {
+	display: flex;
+	justify-content: center;
+	margin: 0.5rem 0;
+	font-size: 2rem;
+	font-weight: 600;
+	color: #2aacf3;
+}
+/*-------------- current time --------------*/
+#profileHeader span[data-testid="test-user-time-header"] {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.1rem;
+	margin-bottom: 1rem;
+	color: #7ed2ff;
+}
+#profileHeader p[data-testid="test-user-time"] {
+	margin-bottom: 1rem;
+	font-size: 1.2rem;
+	color: #a1d8f6;
+}
+/*--------------  PROFILE DETAILS  --------------*/
+.bio-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	margin-bottom: 0.5rem;
+	font-size: 1.3rem;
+	color: #2aacf3;
+}
+#profileDetails p[data-testid="test-user-bio"] {
+	font-size: 1.3rem;
+	margin-bottom: 1.5rem;
+}
+/* ------------------ social links --------------- */
+.social-links-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	margin-bottom: 0.5rem;
+	font-size: 1.3rem;
+	color: #2aacf3;
+}
+#profileDetails nav[data-testid="test-user-social-links"] {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	margin-bottom: 1rem;
+	/* background-color: red; */
+}
+#profileDetails nav[data-testid="test-user-social-links"] ul {
+	list-style: none;
+}
+#profileDetails nav[data-testid="test-user-social-links"] li {
+	margin: 0 0.5rem;
+}
+#profileDetails nav[data-testid="test-user-social-links"] a {
+	color: #ccc;
+	text-decoration: none;
+}
+#profileDetails nav[data-testid="test-user-social-links"] a:hover {
+	text-decoration: underline;
+}

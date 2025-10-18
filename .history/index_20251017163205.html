@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Profile Card</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- profile card container -->
+		<article>
+			<figure>
+				<img
+					src="profile.jpg"
+					alt="Profile Avatar"
+					data-testid="test-user-avatar"
+					id="profileAvatar"
+				/>
+				<figcaption>Ebenezer King</figcaption>
+				<!-- image upload -->
+				<label for="avatarUpload">Or Upload Image:</label>
+				<input type="file" id="avatarUpload" accept="image/*" />
+				<!-- image url -->
+				 
+			</figure>
+			<h2 data-testid="test-user-name">Ebenezer King</h2>
+			<p data-testid="test-user-bio">This</p>
+			<p data-testid="test-user-time"></p>
+		</article>
+
+		<!-- javascript link -->
+		<script src="script.js"></script>
+	</body>
+</html>

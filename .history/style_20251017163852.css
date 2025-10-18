@@ -1,0 +1,32 @@
+/* ---------------------------------------------------------------- */
+/* Project body */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #b0a7a7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+}
+
+/*--------------------------MOBILE WORKFLOW---------------------*/
+/*------------------------profile card container */
+article[data-testid="test-profile-card"] {
+	height: 70%;
+	width: 40%;
+	/* background-color: #ede2e2; */
+	background-color: rgba(255, 255, 255, 0.2);
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	padding: 16px;
+	margin: 16px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* profile image */
+
+/* profile name */
+
+/* profile bio */
