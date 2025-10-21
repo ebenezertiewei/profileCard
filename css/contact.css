@@ -38,6 +38,10 @@ textarea {
 	background-color: rgb(61, 58, 58);
 	color: #ffffff;
 }
+/* ----------------required *------------------------- */
+span {
+	color: rgb(252, 115, 115);
+}
 /*-------------- contact form submit button --------------*/
 button[type="submit"] {
 	background-color: #45a049;

@@ -31,11 +31,11 @@
 			</header>
 			<!-- ---------------- CONTACT FORM ---------------- -->
 			<form id="contactForm" novalidate data-testid="test-contact-form">
-				<label for="name">Full Name</label>
+				<label for="name">Full Name <span>*</span></label>
 				<input type="text" id="name" data-testid="test-contact-name" required />
 				<small id="error-name" data-testid="test-contact-error-name"></small>
 
-				<label for="email">Email</label>
+				<label for="email">Email <span>*</span></label>
 				<input
 					type="email"
 					id="email"
@@ -44,7 +44,7 @@
 				/>
 				<small id="error-email" data-testid="test-contact-error-email"></small>
 
-				<label for="subject">Subject</label>
+				<label for="subject">Subject <span>*</span></label>
 				<input
 					type="text"
 					id="subject"
@@ -56,7 +56,7 @@
 					data-testid="test-contact-error-subject"
 				></small>
 
-				<label for="message">Message</label>
+				<label for="message">Message <span>*</span></label>
 				<textarea
 					id="message"
 					data-testid="test-contact-message"
