@@ -1,0 +1,26 @@
+/*--------------------------MOBILE WORKFLOW---------------------*/
+/*-------------- about container -------------------*/
+main[data-testid="test-about-page"] {
+	max-width: 1000px;
+	height: 100%;
+	margin: 2rem auto;
+	padding: 2rem;
+	background-color: rgba(61, 58, 58, 0.6);
+	color: rgba(255, 255, 255, 0.761);
+	border: 1px solid #020202;
+	border-radius: 1rem;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*-------------- about page paragraphs --------------*/
+main[data-testid="test-about-page"] p {
+	margin-bottom: 2rem;
+	line-height: 1.5;
+}
+section[data-testid="test-about-goals"] ul {
+	list-style-type: circle;
+	margin: 0 0 2rem 1rem;
+}
+section[data-testid="test-about-goals"] li {
+	margin: 0.2rem 0;
+}

@@ -1,33 +1,8 @@
-/* ---------------------------------------------------------------- */
-/*--------------- Project body general style ---------------*/
-html {
-	width: 100dvw;
-	font-family: Arial, sans-serif;
-	font-size: 1rem;
-	font-weight: 400;
-}
-body {
-	background-color: #605a5a;
-	background-image: url("./assets/states.jpg");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	/* height: 100%; */
-	width: 100%;
-}
-* {
-	padding: 0;
-	margin: 0;
-	border: 0;
-	box-sizing: border-box;
-	outline: none;
-}
-
 /*--------------------------MOBILE WORKFLOW---------------------*/
 /*--------------profile card container -------------------*/
 article[data-testid="test-profile-card"] {
-	/* height: 100%; */
-	max-width: 900px;
+	max-width: 800px;
+	height: 100%;
 	padding: 3rem 1rem;
 	background-color: rgba(61, 58, 58, 0.6);
 	color: rgba(255, 255, 255, 0.761);
@@ -35,14 +10,8 @@ article[data-testid="test-profile-card"] {
 	flex-direction: column;
 	align-items: center;
 	border: 1px solid #020202;
-	border-radius: 8px;
+	border-radius: 1rem;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-	color: #fff;
-	text-align: center;
-	margin-bottom: 1rem;
 }
 
 /*-------------  PROFILE HEADER  -------------*/
@@ -51,7 +20,6 @@ h1 {
 	display: flex;
 	flex-direction: column;
 	padding: 1rem 0;
-	/* background-color: orange; */
 }
 #profileHeader figure {
 	display: flex;
@@ -88,7 +56,6 @@ h1 {
 	color: #a8a8a8;
 }
 #avatarUrl {
-	/* color: #ccc; */
 	padding: 0.5rem;
 	background-color: rgb(61, 58, 58);
 	border: 1px solid #555555;
@@ -148,16 +115,22 @@ h1 {
 }
 #profileDetails nav[data-testid="test-user-social-links"] ul {
 	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 }
 #profileDetails nav[data-testid="test-user-social-links"] li {
 	margin: 0.2rem 1rem;
 }
 #profileDetails nav[data-testid="test-user-social-links"] a {
 	color: #ccc;
+	border: 1px solid #2aacf3;
+	border-radius: 6px;
+	padding: 0.3rem 0.8rem;
 	text-decoration: none;
 }
 #profileDetails nav[data-testid="test-user-social-links"] a:hover {
-	text-decoration: underline;
+	background-color: #2aadf365;
 }
 /* ------------------ hobbies --------------- */
 .hobbies-header {
@@ -174,6 +147,9 @@ h1 {
 }
 #profileDetails section[data-testid="test-user-hobbies"] li {
 	margin: 0.2rem 1rem;
+	background-color: rgba(128, 128, 128, 0.384);
+	border-radius: 6px;
+	padding: 0.3rem 0.8rem;
 }
 /* ------------------ dislikes --------------- */
 .dislikes-header {
@@ -190,56 +166,54 @@ h1 {
 }
 #profileDetails section[data-testid="test-user-dislikes"] li {
 	margin: 0.2rem 1rem;
+	background-color: rgba(128, 128, 128, 0.384);
+	border-radius: 6px;
+	padding: 0.3rem 0.8rem;
 }
 
 /* ---------------------------------- MEDIA QUERY ------------------------------- */
 /* ------------------- tablet ------------------- */
 @media (min-width: 768px) {
-	html {
-		height: 100dvh;
-	}
 	body {
-		height: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 0 2rem;
+		padding: 2rem;
 	}
 	article[data-testid="test-profile-card"] {
-		display: flex;
-		flex-direction: row;
 		width: 100%;
-		gap: 2rem;
+		gap: 1rem;
 	}
 	#profileDetails {
-		margin-top: 5rem;
+		margin-top: 1rem;
 		flex: 1;
 	}
 	#profileDetails nav[data-testid="test-user-social-links"] ul {
 		display: flex;
 		flex-direction: row;
+		gap: 0.5rem;
+	}
+	#profileDetails section[data-testid="test-user-hobbies"] li {
+		width: fit-content;
+	}
+	#profileDetails section[data-testid="test-user-dislikes"] li {
+		width: fit-content;
 	}
 }
 /* ------------------- desktop ------------------- */
 @media (min-width: 1024px) {
 	article[data-testid="test-profile-card"] {
-		padding: 5rem 3rem;
-		gap: 5rem;
-	}
-	#profileDetails {
-		margin-top: 5rem;
-		flex: 1;
-	}
-	#profileDetails nav[data-testid="test-user-social-links"] ul {
-		display: flex;
-		flex-direction: row;
+		padding: 2rem 3rem;
+		gap: 1rem;
 	}
 	#profileDetails section[data-testid="test-user-hobbies"] ul {
 		display: flex;
 		flex-direction: row;
+		list-style: square;
 	}
 	#profileDetails section[data-testid="test-user-dislikes"] ul {
 		display: flex;
 		flex-direction: row;
+		list-style: square;
 	}
 }
