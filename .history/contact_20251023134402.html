@@ -32,14 +32,9 @@
 			<!-- ---------------- CONTACT FORM ---------------- -->
 			<form id="contactForm" novalidate data-testid="test-contact-form">
 				<label for="name">Full Name <span>*</span></label>
-				<input
-					type="text"
-					id="name"
-					data-testid="test-contact-name"
-					required
-					aria-describedby="error-name"
-				/>
+				<input type="text" id="name" data-testid="test-contact-name" required aria-describedby="error-name" />
 				<span id="error-name" data-testid="test-contact-error-name"></span>
+
 
 				<label for="email">Email <span>*</span></label>
 				<input
@@ -47,8 +42,8 @@
 					id="email"
 					data-testid="test-contact-email"
 					required
-					aria-describedby="error-email"
 				/>
+				<	>
 				<span id="error-email" data-testid="test-contact-error-email"></span>
 
 				<label for="subject">Subject <span>*</span></label>
@@ -57,9 +52,8 @@
 					id="subject"
 					data-testid="test-contact-subject"
 					required
-					aria-describedby="error-subject"
 				/>
-				<span
+				<small
 					id="error-subject"
 					data-testid="test-contact-error-subject"
 				></span>
@@ -70,9 +64,7 @@
 					data-testid="test-contact-message"
 					required
 					minlength="10"
-					aria-describedby="error-message"
 				></textarea>
-
 				<span
 					id="error-message"
 					data-testid="test-contact-error-message"

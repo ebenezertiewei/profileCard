@@ -32,14 +32,9 @@
 			<!-- ---------------- CONTACT FORM ---------------- -->
 			<form id="contactForm" novalidate data-testid="test-contact-form">
 				<label for="name">Full Name <span>*</span></label>
-				<input
-					type="text"
-					id="name"
-					data-testid="test-contact-name"
-					required
-					aria-describedby="error-name"
-				/>
-				<span id="error-name" data-testid="test-contact-error-name"></span>
+				<input type="text" id="name" data-testid="test-contact-name" required />
+				<small id="error-name" data-testid="test-contact-error-name"></small>
+				
 
 				<label for="email">Email <span>*</span></label>
 				<input
@@ -47,9 +42,8 @@
 					id="email"
 					data-testid="test-contact-email"
 					required
-					aria-describedby="error-email"
 				/>
-				<span id="error-email" data-testid="test-contact-error-email"></span>
+				<small id="error-email" data-testid="test-contact-error-email"></small>
 
 				<label for="subject">Subject <span>*</span></label>
 				<input
@@ -57,12 +51,11 @@
 					id="subject"
 					data-testid="test-contact-subject"
 					required
-					aria-describedby="error-subject"
 				/>
-				<span
+				<small
 					id="error-subject"
 					data-testid="test-contact-error-subject"
-				></span>
+				></small>
 
 				<label for="message">Message <span>*</span></label>
 				<textarea
@@ -70,13 +63,11 @@
 					data-testid="test-contact-message"
 					required
 					minlength="10"
-					aria-describedby="error-message"
 				></textarea>
-
-				<span
+				<small
 					id="error-message"
 					data-testid="test-contact-error-message"
-				></span>
+				></small>
 
 				<button type="submit" data-testid="test-contact-submit">Submit</button>
 
