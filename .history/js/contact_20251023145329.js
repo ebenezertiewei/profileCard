@@ -1,45 +1,31 @@
-// --------------------------------------------------------------------------
-// ------------------- contact form validation ----------
 document.addEventListener("DOMContentLoaded", () => {
 	const form = document.getElementById("contactForm");
 	const successMsg = document.getElementById("success");
 
-	// ------------------- Show small when typing -------------------
 	const fields = [
-		{ input: "name", hint: "Please enter your full name (e.g. John Who)." },
-		{
-			input: "email",
-			hint: "Please enter a valid email (e.g. JohnWho@xxxx.xxx).",
-		},
-		{ input: "subject", hint: "Add a short subject (at least 5 letters)." },
-		{ input: "message", hint: "Write at least 10 characters." },
+		{ input: "name", error: "error-name" },
+		{ input: "email", error: "error-email" },
+		{ input: "subject", error: "error-subject" },
+		{ input: "message", error: "error-message" },
 	];
 
-	fields.forEach(({ input, hint }) => {
+	// 👇 When input is focused, show its <small>
+	fields.forEach(({ input, error }) => {
 		const inputEl = document.getElementById(input);
-		const smallEl = document.getElementById(`error-${input}`);
+		const errorEl = document.getElementById(error);
 
-		// show the hint when user starts typing
-		inputEl.addEventListener("input", () => {
-			if (inputEl.value.trim() !== "") {
-				smallEl.style.display = "block";
-				smallEl.textContent = hint;
-			} else {
-				smallEl.style.display = "none";
-				smallEl.textContent = "";
-			}
+		inputEl.addEventListener("focus", () => {
+			errorEl.style.display = "inline"; // or "block"
 		});
 
-		// hide hint on blur if empty
 		inputEl.addEventListener("blur", () => {
-			if (inputEl.value.trim() === "") {
-				smallEl.style.display = "none";
-				smallEl.textContent = "";
+			// Hide it only if no error text exists
+			if (!errorEl.textContent.trim()) {
+				errorEl.style.display = "none";
 			}
 		});
 	});
 
-	// ------------------- Submit validation -------------------
 	form.addEventListener("submit", (e) => {
 		e.preventDefault();
 
@@ -97,12 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (valid) {
 			successMsg.classList.add("show");
 			e.target.reset();
-
-			// hide all smalls again after successful submit
-			document.querySelectorAll("small").forEach((el) => {
-				el.style.display = "none";
-				el.textContent = "";
-			});
 
 			setTimeout(() => {
 				successMsg.classList.remove("show");

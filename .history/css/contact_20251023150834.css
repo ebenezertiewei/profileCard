@@ -63,7 +63,7 @@ small {
 	font-size: 0.9rem;
 	margin-top: -1.3rem;
 	margin-bottom: 1rem;
-	transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.2s ease-in-out; /* smooth fade */
 	opacity: 0;
 }
 
@@ -71,6 +71,7 @@ small[style*="display: block"] {
 	opacity: 1;
 }
 
+/* Keep focus behavior (optional) */
 input:focus + small,
 textarea:focus + small {
 	display: block;

@@ -4,42 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	const form = document.getElementById("contactForm");
 	const successMsg = document.getElementById("success");
 
-	// ------------------- Show small when typing -------------------
-	const fields = [
-		{ input: "name", hint: "Please enter your full name (e.g. John Who)." },
-		{
-			input: "email",
-			hint: "Please enter a valid email (e.g. JohnWho@xxxx.xxx).",
-		},
-		{ input: "subject", hint: "Add a short subject (at least 5 letters)." },
-		{ input: "message", hint: "Write at least 10 characters." },
-	];
-
-	fields.forEach(({ input, hint }) => {
-		const inputEl = document.getElementById(input);
-		const smallEl = document.getElementById(`error-${input}`);
-
-		// show the hint when user starts typing
-		inputEl.addEventListener("input", () => {
-			if (inputEl.value.trim() !== "") {
-				smallEl.style.display = "block";
-				smallEl.textContent = hint;
-			} else {
-				smallEl.style.display = "none";
-				smallEl.textContent = "";
-			}
-		});
-
-		// hide hint on blur if empty
-		inputEl.addEventListener("blur", () => {
-			if (inputEl.value.trim() === "") {
-				smallEl.style.display = "none";
-				smallEl.textContent = "";
-			}
-		});
-	});
-
-	// ------------------- Submit validation -------------------
 	form.addEventListener("submit", (e) => {
 		e.preventDefault();
 
@@ -50,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		let valid = true;
 
-		// Clear all existing errors
+		// ------------------Clear all existing errors------------------
 		document.querySelectorAll("small").forEach((el) => (el.textContent = ""));
 
 		// ------------------- Full Name Validation -------------------
@@ -97,12 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (valid) {
 			successMsg.classList.add("show");
 			e.target.reset();
-
-			// hide all smalls again after successful submit
-			document.querySelectorAll("small").forEach((el) => {
-				el.style.display = "none";
-				el.textContent = "";
-			});
 
 			setTimeout(() => {
 				successMsg.classList.remove("show");

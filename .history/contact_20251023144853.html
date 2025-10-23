@@ -49,7 +49,7 @@
 					required
 					aria-describedby="error-email"
 				/>
-				<small id="error-email" data-testid="test-contact-error-email"></small>
+				<s id="error-email" data-testid="test-contact-error-email"></s>
 
 				<label for="subject">Subject <span>*</span></label>
 				<input
@@ -59,10 +59,10 @@
 					required
 					aria-describedby="error-subject"
 				/>
-				<small
+				<span
 					id="error-subject"
 					data-testid="test-contact-error-subject"
-				></small>
+				></span>
 
 				<label for="message">Message <span>*</span></label>
 				<textarea
@@ -73,10 +73,10 @@
 					aria-describedby="error-message"
 				></textarea>
 
-				<small
+				<span
 					id="error-message"
 					data-testid="test-contact-error-message"
-				></small>
+				></span>
 
 				<button type="submit" data-testid="test-contact-submit">Submit</button>
 

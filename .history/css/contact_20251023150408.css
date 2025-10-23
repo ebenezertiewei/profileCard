@@ -63,16 +63,8 @@ small {
 	font-size: 0.9rem;
 	margin-top: -1.3rem;
 	margin-bottom: 1rem;
-	transition: opacity 0.2s ease-in-out;
-	opacity: 0;
 }
-
-small[style*="display: block"] {
-	opacity: 1;
-}
-
-input:focus + small,
-textarea:focus + small {
+input:focus + small {
 	display: block;
 }
 /*-------------- contact form success message --------------*/

@@ -58,22 +58,20 @@ button[type="submit"]:hover {
 }
 /*-------------- contact form error message --------------*/
 small {
-	display: none;
+  display: none;
 	color: rgb(252, 115, 115);
+	display: block;
 	font-size: 0.9rem;
 	margin-top: -1.3rem;
 	margin-bottom: 1rem;
-	transition: opacity 0.2s ease-in-out;
-	opacity: 0;
 }
 
-small[style*="display: block"] {
-	opacity: 1;
+small {
+  font-size: 0.85em;
 }
 
-input:focus + small,
-textarea:focus + small {
-	display: block;
+input:focus + small {
+  display: block;
 }
 /*-------------- contact form success message --------------*/
 #success {
